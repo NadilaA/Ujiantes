@@ -27,12 +27,12 @@ Route::get('/pesanan/edit/{id}', 'PesananController@edit');
 Route::put('/pesanan/update/{id}', 'PesananController@update');
 Route::get('/pesanan/close/{id}', 'PesananController@close');
 
-Route::get('/customer/login', 'CustomerLoginController@showLoginForm')->name('customer.loginform');
-Route::get('/customer/register', 'CustomerLoginController@showRegisterForm')->name('customer.registerform');
-Route::post('/customer/login', 'CustomerLoginController@login')->name('customer.login');
-Route::post('/customer/register', 'CustomerLoginController@register')->name('customer.register');
-Route::get('/customer/home', 'CustomerLoginController@index')->middleware('auth:customer');
-Route::get('/customer/logout', 'CustomerLoginController@logout')->name('customer.logout');
+Route::get('/pelayan/login', 'PelayanLoginController@showLoginForm')->name('pelayan.loginform');
+Route::get('/pelayan/register', 'PelayanLoginController@showRegisterForm')->name('pelayan.registerform');
+Route::post('/pelayan/login', 'PelayanLoginController@login')->name('pelayan.login');
+Route::post('/pelayan/register', 'PelayanLoginController@register')->name('pelayan.register');
+Route::get('/pelayan/home', 'PelayanLoginController@index')->middleware('auth:pelayan');
+Route::get('/pelayan/logout', 'PelayanLoginController@logout')->name('pelayan.logout');
 
 Auth::routes();
 
