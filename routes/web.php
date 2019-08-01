@@ -27,12 +27,12 @@ Route::get('/pesanan/edit/{id}', 'PesananController@edit');
 Route::put('/pesanan/update/{id}', 'PesananController@update');
 Route::get('/pesanan/close/{id}', 'PesananController@close');
 
-Route::get('/pelayan/login', 'PelayanLoginController@showLoginForm')->name('pelayan.loginform');
+/*Route::get('/pelayan/login', 'PelayanLoginController@showLoginForm')->name('pelayan.loginform');
 Route::get('/pelayan/register', 'PelayanLoginController@showRegisterForm')->name('pelayan.registerform');
 Route::post('/pelayan/login', 'PelayanLoginController@login')->name('pelayan.login');
 Route::post('/pelayan/register', 'PelayanLoginController@register')->name('pelayan.register');
 Route::get('/pelayan/home', 'PelayanLoginController@index')->middleware('auth:pelayan');
-Route::get('/pelayan/logout', 'PelayanLoginController@logout')->name('pelayan.logout');
+Route::get('/pelayan/logout', 'PelayanLoginController@logout')->name('pelayan.logout');*/
 
 Auth::routes();
 
